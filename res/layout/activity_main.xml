@@ -1,0 +1,113 @@
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" 
+    android:background="@drawable/white_background"
+    >
+
+    <LinearLayout
+        android:id="@+id/LLMainDice"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+        <View
+            android:id="@+id/view1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:contentDescription="@string/descDiceImage"
+            android:src="@drawable/dice5" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/LLButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+        
+        <Button
+            android:id="@+id/btnHold"
+            android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="0.33"
+            android:onClick="onHoldClick"
+            android:text="@string/btnHold" 
+            style="?android:attr/borderlessButtonStyle"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            
+            />
+
+        <Button
+            android:id="@+id/btnRoll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:onClick="onRollClick"
+            android:text="@string/btnRoll" 
+            style="?android:attr/borderlessButtonStyle"
+            />
+
+        <Button
+            android:id="@+id/btnNew"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="0.33"
+			style="?android:attr/borderlessButtonStyle"
+            android:onClick="onNewClick"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:text="@string/btnNew" />
+</LinearLayout>
+
+    <TextView
+        android:id="@+id/turnScore"
+        android:text="@string/turnScoreLabel"       
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:color="@color/steel"	
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_below="@+id/playerScore"
+         />
+    
+    <TextView
+        android:id="@+id/playerScore"
+        android:text="@string/playerScoreLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:textColor="@color/white"
+		
+		android:textSize="40sp"
+        />
+</RelativeLayout>

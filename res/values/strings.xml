@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+	<!--  Trailing space would be trimmed automatically
+    	  Preserved trailing space using quotes
+     -->
+     
+    <string name="btnHold">Hold</string>
+    <string name="btnRoll">Roll</string>
+    <string name="btnStop">Stop</string>
+    <string name="btnNew">New</string>
+    
+    <string name="promptZeroTurnScoreTitle">"A little too eager?"</string>
+    <string name="promptZeroTurnScore">"You should roll at least once before holding!"</string>
+    <string name="descDiceImage">Dice rolled</string>
+    <string name="app_name">DiceGreed</string>
+    <string name="action_settings">Settings</string>
+    <string name="turnScore">This turn: 0</string>
+	<string name="turnScoreLabel">"This turn: "</string>
+	<string name="playerScoreLabel">Player 1: 0\nPlayer 2: 0</string>
+	<string name="promptRolledOne">You rolled a 1.\nNo points this time.</string>
+	
+	<string name="promptWinnerTitle">Winner!</string>
+	<string name="promptWinnerPart1">"Player "</string>
+	<!--  player number is placed between these 
+			TODO place in whole player name (can default as "Player 1")
+	-->
+	<string name="promptWinnerPart2">" wins!\nGreat work!"</string>
+
+	<string name="promptChangePlayerTitle">Change Player</string>
+	<string name="promptChangePlayerPart1">"\nHandover to player "</string>
+	<!--  player number is placed between these 
+			TODO place in whole player name (can default as "Player 1")
+	-->
+	<string name="promptChangePlayerPart2">.</string>
+	
+    <string name="promptHold">Your points are safe!</string>
+    
+    <string name="promptNewGameTitle">Start new game:</string>
+    <string name="promptNewGameMessage">Are you sure you wish to start a new game?</string>
+    
+    <string name="rulesTitle">Rules</string>
+    <string name="rules">Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to \"hold\":-
+		\n\nIf the player rolls a 1, they score nothing and it becomes the next player\'s turn.
+		\n\nIf the player rolls any other number, it is added to their turn total and the player\'s turn continues.
+		\n\nIf a player chooses to \"hold\", their turn total is added to their score, and it becomes the next player\'s turn.
+		\n\nThe first player to score 100 or more points wins.
+    </string>
+</resources>
