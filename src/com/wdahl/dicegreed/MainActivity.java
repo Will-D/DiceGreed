@@ -43,24 +43,11 @@ public class MainActivity extends Activity {
 		mHoldButton = (Button) findViewById(R.id.btnHold);
 		mRollButton = (Button) findViewById(R.id.btnRoll);
 		mNewButton = (Button) findViewById(R.id.btnNew);
-		
-		// Enable buttons other than "New"
-		mHoldButton.setVisibility(View.VISIBLE);
-		mRollButton.setVisibility(View.VISIBLE);
-		mNewButton.setVisibility(View.VISIBLE);
-				
 		mViewTurnScore = (TextView) findViewById(R.id.turnScore);
 		mViewPlayerScore = (TextView) findViewById(R.id.playerScore);
 		mViewDiceImage = (ImageView) findViewById(R.id.imageView1); 
 		
-		// Initialize variables for start of game 
-		mPlayers = new Players(2);
-		mDice = new Dice();
-		mTurnScore = 0;
-		refreshPlayerScores();
-		
-		showRules();
-		
+		startNewGame();
 	}
 
 	@Override
@@ -119,7 +106,7 @@ public class MainActivity extends Activity {
 	 * @param v - the view which was clicked on
 	 */
 	public void onNewClick(View v){
-		if (mPlayers.getScore() > 100) resetGame();
+		if (mPlayers.getScore() > 100) startNewGame();
 		else {
 			AlertDialog.Builder builder = new AlertDialog.Builder(this);
 			builder.setTitle(getString(R.string.promptNewGameTitle)); 
@@ -128,7 +115,7 @@ public class MainActivity extends Activity {
 			builder.setPositiveButton(android.R.string.ok,
 					new DialogInterface.OnClickListener() {
 			            public void onClick(DialogInterface dialog, int buttonId) {
-			                 resetGame();
+			                 startNewGame();
 			            }
 			        });
 			AlertDialog dialog = builder.create();
@@ -140,13 +127,20 @@ public class MainActivity extends Activity {
 	 * Resets the current game.
 	 * Starts a new game from scratch.
 	 */
-	public void resetGame() {
-		resetTurnScore();
-		mPlayers = new Players(2); 
-		refreshPlayerScores();
-		// Enable buttons other than "New"
+	public void startNewGame() {
+		
+		// Show buttons (in case they were hidden)
 		mHoldButton.setVisibility(View.VISIBLE);
 		mRollButton.setVisibility(View.VISIBLE);
+		mNewButton.setVisibility(View.VISIBLE);
+				
+		// Initialize variables for start of game 
+		mPlayers = new Players(2);
+		mDice = new Dice();
+		
+		resetTurnScore();
+		refreshPlayerScores();
+		showRules();
 	}
 	
 	/**
