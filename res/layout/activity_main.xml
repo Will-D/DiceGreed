@@ -11,7 +11,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" 
-    android:background="@drawable/white_background"
+    android:background="@color/blue"
     >
 
     <LinearLayout
@@ -60,9 +60,9 @@
             android:onClick="onHoldClick"
             android:text="@string/btnHold" 
             style="?android:attr/borderlessButtonStyle"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="35sp"
-            
+            android:typeface="serif"
             />
 
         <Button
@@ -70,11 +70,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.33"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="35sp"
             android:onClick="onRollClick"
             android:text="@string/btnRoll" 
             style="?android:attr/borderlessButtonStyle"
+            android:typeface="serif"
             />
 
         <Button
@@ -84,9 +85,11 @@
 			android:layout_weight="0.33"
 			style="?android:attr/borderlessButtonStyle"
             android:onClick="onNewClick"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="35sp"
-            android:text="@string/btnNew" />
+            android:text="@string/btnNew"
+            android:typeface="serif"
+             />
 </LinearLayout>
 
     <TextView
@@ -96,8 +99,9 @@
         android:layout_height="wrap_content"
         android:color="@color/steel"	
         android:gravity="center"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="30sp"
+        android:typeface="serif"
         android:layout_below="@+id/playerScore"
          />
     
@@ -106,8 +110,8 @@
         android:text="@string/playerScoreLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" 
-        android:textColor="@color/white"
-		
+        android:textColor="@color/black"
+		android:typeface="serif"
 		android:textSize="40sp"
         />
 </RelativeLayout>
